@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Daftar Akun | Video Belajar</title>
+  <meta name="description" content="Buat akun Video Belajar dan mulai perjalanan belajarmu.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="register.js" defer></script>
+</head>
+<body>
+  <!-- Header: konsisten dengan halaman login -->
+  <header class="site-header">
+    <div class="header-box">
+      <a href="login.html" class="logo" aria-label="Video Belajar">
+        <img src="videobelajar.png" alt="Logo Video Belajar">
+      </a>
+    </div>
+  </header>
+
+  <main class="register-page">
+    <section class="register-card" aria-labelledby="register-title">
+      <div class="register-heading">
+        <h1 id="register-title">Pendaftaran Akun</h1>
+        <p>Yuk, daftarkan akunmu sekarang juga!</p>
+      </div>
+
+      <form id="register-form">
+        <!-- Nama lengkap -->
+        <div class="form-group">
+          <label for="name">
+            Nama Lengkap <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukkan nama lengkap"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="register-email">
+            E-mail <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="register-email"
+            name="email"
+            placeholder="Masukkan alamat e-mail"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <!-- Nomor HP -->
+        <div class="form-group">
+          <label for="phone">
+            Nomor HP <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            placeholder="08xxxxxxxxxx"
+            inputmode="tel"
+            pattern="[+]?[0-9][0-9 ]{7,17}"
+            title="Masukkan nomor HP yang valid, minimal 8 digit."
+            required
+          >
+        </div>
+
+        <!-- Kata sandi -->
+        <div class="form-group">
+          <label for="register-password">
+            Kata Sandi <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="register-password"
+              name="password"
+              placeholder="Maukkan password anda"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              data-password-toggle="register-password"
+              aria-label="Tampilkan kata sandi"
+              aria-pressed="false"
+            >Lihat</button>
+          </div>
+        </div>
+
+        <!-- Konfirmasi kata sandi -->
+        <div class="form-group">
+          <label for="confirm-password">
+            Konfirmasi Kata Sandi
+            <span class="required-mark" aria-hidden="true">*</span>
+          </label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              placeholder="Masukkan ulang kata sandi"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              data-password-toggle="confirm-password"
+              aria-label="Tampilkan konfirmasi kata sandi"
+              aria-pressed="false"
+            >Lihat</button>
+          </div>
+        </div>
+
+        <div class="register-options">
+          <a href="forgot.html" id="register-forgot-link">
+            Lupa kata sandi?
+          </a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Daftar
+        </button>
+
+        <p
+          id="register-message"
+          class="form-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+
+      <!-- Pengguna yang sudah punya akun -->
+      <div class="register-login">
+        <a href="index.html" class="btn btn-background">
+          Masuk
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span></span>
+        <p>atau</p>
+        <span></span>
+      </div>
+
+      <!-- Google SSO -->
+      <button type="button" id="register-google" class="btn btn-google">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335"
+            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/>
+          <path fill="#4285F4"
+            d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.73 7.18l7.72 5.99c4.51-4.16 7.05-10.28 7.05-17.64Z"/>
+          <path fill="#FBBC05"
+            d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.28-3.13.78-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.53 2.56 10.78l7.97-6.19Z"/>
+          <path fill="#34A853"
+            d="M24 48c6.48 0 11.93-2.13 15.91-5.81l-7.72-5.99c-2.14 1.44-4.89 2.3-8.19 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/>
+        </svg>
+        Daftar dengan Google
+      </button>
+    </section>
+  </main>
+</body>
+</html>

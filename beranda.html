@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda | Video Belajar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="beranda.js" defer></script>
+</head>
+<body class="home-page">
+
+  <!-- HEADER -->
+  <header class="home-header">
+    <a href="beranda.html" class="home-logo">
+      <img src="videobelajar.png" alt="Video Belajar">
+    </a>
+
+    <div class="profile-menu">
+      <span class="profile-name">Hi, Addo</span>
+      <button class="profile-avatar" id="profileButton"
+        aria-label="Buka menu profil" aria-expanded="false">
+        A
+      </button>
+
+      <!-- <div class="profile-dropdown" id="profileDropdown" hidden>
+        <a href="#profil">Profil Saya</a>
+        <a href="#kursus">Kursus Saya</a>
+        <a href="index.html">Keluar</a>
+      </div> -->
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-placeholder">
+        <h1>Revolusi Pembelajaran : Pelajari Ilmu Baru melalui video video interaktif</h1>
+        <p>
+          Temukan temukan ilmu baru dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. anda juga 
+          dapat berlatih melalui latihan - latihan yang interaktif.
+        </p>
+        <a href="#kursus" class="home-button">Start exploring courses</a>
+      </div>
+    </section>
+
+    <!-- KOLEKSI KURSUS -->
+    <section class="courses-section" id="kursus">
+      <div class="section-heading">
+        <h2>Koleksi Video Pembelajaran Unggulan</h2>
+        <p>Pilih kursus yang sesuai dengan minat dan tujuanmu.</p>
+      </div>
+
+      <!-- Navigasi kategori -->
+      <nav class="category-nav" aria-label="Kategori kursus">
+        <button class="category-button active"
+          data-category="semua">Semua</button>
+        <button class="category-button"
+          data-category="desain">Desain</button>
+        <button class="category-button"
+          data-category="pemrograman">Pemrograman</button>
+        <button class="category-button"
+          data-category="bisnis">Bisnis</button>
+        <button class="category-button"
+          data-category="pemasaran">Pemasaran</button>
+      </nav>
+
+      <!-- Kartu kursus akan dibuat melalui JavaScript -->
+      <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="newsletter-content">
+        <h2>MAU BELAJAR LEBIH BANYAK?</h2>
+        <p>
+          Daftarkan dirimu untuk mendapatkan informasi terbaru
+          dan penawaran spesial dari program-program videobelajar
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <label class="visually-hidden" for="newsletterEmail">
+            Alamat email
+          </label>
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Masukkan alamat email"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="home-button">
+            Subscribe
+          </button>
+        </form>
+        <p class="newsletter-message" id="newsletterMessage"
+          aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="home-footer">
+    <div class="footer-main">
+      <div class="footer-company">
+        <a href="beranda.html" class="home-logo">
+          <img src="videobelajar.png" alt="Video Belajar">
+        </a>
+        <h3>Gali Potensi Anda Melalui Pembelajaran Video di videobelajar</h3>
+        <p>Jl. Raya Sendangmulyo No.6, Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</p>
+        <p>+62 812 4455 9012</p>
+      </div>
+
+      <div class="footer-links">
+        
+      </div>
+
+      <div class="footer-links">
+        <h4>Perusahaan</h4>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Hubungi Kami</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Jelajahi</h4>
+        <a href="#kursus">Semua Kursus</a>
+        <a href="#kursus" data-footer-category="desain">Desain</a>
+        <a href="#kursus" data-footer-category="pemrograman">Pemrograman</a>
+        <a href="#kursus" data-footer-category="bisnis">Bisnis</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> ABCDE.
+        All Rights Reserved.</p>
+        </div>
+        <div class="footer-links">
+        </div>
+        <div class="footer-links">
+        </div>
+        <div class="footer-links">
+            <div class="social-links">
+                <a href="https://instagram.com/" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram">
+                <img src="icons/instagram.png" alt="">
+                </a>
+
+                <a href="https://x.com/" target="_blank"
+                rel="noopener noreferrer" aria-label="X">
+                <img src="icons/X.png" alt="">
+                </a>
+
+                <a href="https://facebook.com/" target="_blank"
+                rel="noopener noreferrer" aria-label="Facebook">
+                <img src="icons/facebook.png" alt="">
+                </a>
+
+                <a href="https://linkedin.com/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="icons/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>
